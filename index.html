@@ -1,37 +1,102 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>tikibars network | tikibars.net</title>
-		<link rel="icon" type="image/png" href="favicon.png" sizes="196x196">
-	<style>
+<head>
+    <title>tikibars network | tikibars.net</title>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="196x196">
+    <style>
         body {
-            background-color: #fdf5e6; 
-            text-align: center; 
+            background-color: #fdf5e6;
+            text-align: center;
             margin: 0;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+
         #logo {
             position: absolute;
-            top: 20px; 
-            left: 20px; 
+            top: 20px;
+            left: 20px;
         }
+
         h1 {
-            font-size: 48px; 
-            margin-top: 200px;
-            color: #ff6347; 
-            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 48px;
+            color: #ff6347;
+            font-family: 'Comic Sans MS', sans-serif;
+            margin-bottom: 0;
         }
-        h2 {
-            font-size: 18px; 
-            margin-top: 20px;
-            color: #ff6347; 
-            font-family: 'Trebuchet MS', sans-serif;
+
+        h2, h3 {
+            font-size: 18px;
+            color: #ff6347;
+            font-family: 'Comic Sans MS', sans-serif;
+            margin: 10px 0;
         }
-        h3 {
-            font-size: 18px; 
-            margin-top: 20px;
-            color: #ff6347; 
-            font-family: 'Trebuchet MS', sans-serif;
+
+        emojiText {
+            position: absolute;
+            font-size: 81px;
+            top: 0;
+            right: 0;
         }
+
+        #beach {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #f4a460;
+            clip-path: ellipse(90% 50% at 50% 100%);
+        }
+
+        #water {
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            height: 20%;
+            background-color: #83c9f3;
+        }
+
+        #palmTrunk {
+            position: absolute;
+            bottom: 15%;
+            left: 10%;
+            width: 30px;
+            height: 150px;
+            background-color: #8b4513;
+            transform: rotate(-15deg);
+            border-radius: 10px;
+        }
+
+        .leaf {
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            background-color: #228B22;
+            border-radius: 50%;
+        }
+
+        #leaf1 {
+            top: -30px;
+            left: -50px;
+            transform: rotate(30deg);
+        }
+
+        #leaf2 {
+            top: -30px;
+            left: 0px;
+            transform: rotate(-30deg);
+        }
+
+        #leaf3 {
+            top: -60px;
+            left: -30px;
+            transform: rotate(0deg);
+        }
+
         #bottomRectangle {
             position: absolute;
             bottom: 0;
@@ -43,10 +108,21 @@
     </style>
 </head>
 <body>
-    <img id="logo" src="logo.png" alt="tikibars network" width="400" height="150">
+    <img id="logo" src="logo.png" alt="tikibars network" width="200" height="75">
+    <emojiText>&#128511; &#127865; &#129481;</emojiText>
     <h1>Welcome to this cool website!</h1>
     <h2>gonna make this a very cool website, might take a while sorry</h2>
-	<h3>will be vacation vibes!!</h3>
+    <h3>will be vacation vibes!! - max</h3>
+
+    <div id="water"></div>
+    <div id="beach"></div>
+
+    <div id="palmTrunk">
+        <div id="leaf1" class="leaf"></div>
+        <div id="leaf2" class="leaf"></div>
+        <div id="leaf3" class="leaf"></div>
+    </div>
+
     <div id="bottomRectangle"></div>
 </body>
 </html>
